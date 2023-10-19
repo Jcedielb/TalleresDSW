@@ -2,63 +2,77 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV Shows</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <style>
-        body {
-            margin: 20px;
-            padding: 20px;
-        }
-
-        .card {
-            margin-bottom: 20px;
-            padding: 20px;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-header {
-            background-color: #000;
-            color: #fff;
-        }
-
-        th, td {
-            padding: 8px;
-        }
-    </style>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TV Shows</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <style>
+            body {
+                margin: 20px;
+                padding: 20px;
+            }
+    
+            .card {
+                margin-bottom: 20px;
+                padding: 20px;
+                border: none;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+    
+            .card-header {
+                background-color: #000;
+                color: #fff;
+            }
+    
+            th, td {
+                padding: 8px;
+            }
+        </style>
+    
 </head>
 
 <body>
     <div class="container">
-            <div class="col">
+        <div class="row">
+            <div class="col-8">
                 <h2>TV Series</h2>
                 <div class="card">
                     <table class="table">
                         <thead class="thead-dark">
-                          <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Channel</th>
-                            <th>Seasons</th>
-                          </tr>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Channel</th>
+                                <th>Seasons</th>
+                            </tr>
                         </thead>
                         <tbody id="series">
                         </tbody>
-                      </table>
-                      <tbody >
+                    </table>
+                    <div>
                         <span id="avarage"></span>
-                    </tbody>
-
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div id="series-detail" class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Detalles de la Serie</h5>
+                        <h6 class="card-subtitle mb-2 text-muted" id="series-detail-name"></h6>
+                        <p class="card-text" id="series-detail-description"></p>
+                        <a href="#" class="card-link" id="series-detail-webUrl" target="_blank"></a>
+                        <img src="" alt="" class="card-img-top" id="series-detail-image">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/data.js"></script>
+    <script type="module" src="./scripts/serie.js"></script>
 </body>
-<script type="module" src="./scripts/main.js"></script>
-<script type="module" src="./scripts/data.js"></script>
-<script type="module" src="./scripts/serie.js"></script>
+
 </html>
+
